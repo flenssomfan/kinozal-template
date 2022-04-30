@@ -3,27 +3,112 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>КиноЗал</title>
-  <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap"
-        rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+    rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
   <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
+  <header class="header">
+    <div class="header-logo">
+      <div class="container">
+        <strong class="header-logo__title">КиноЗал</strong>
+        <span class="header-logo__description">Найди свое Кино</span>
+      </div>
+    </div>
 
+    <div class="header-menu">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top"
+              aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
 
-<script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+          <div class="collapse navbar-collapse" id="navbar-top">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="active">
+                <a href="#">Главная</span></a>
+              </li>
+              <li><a href="#">Фильмы</a></li>
+              <li><a href="#">Сериалы</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Рейтинг</a></li>
+              <li><a href="#">Раздачи</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+
+      <main class="main col-lg-9 col-lg-push-3 col-md-8 col-lg-push-4">
+        <h1>Main</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti unde a, non autem quos ducimus possimus
+          iusto? Voluptatibus asperiores tempore illo ratione. Amet omnis voluptatem et placeat earum, ipsam vitae.</p>
+      </main>
+      <aside class="left-sidebar col-lg-3 col-lg-pull-9 col-md-4 col-md-pull-8">
+        <div class="vertical slider panel panel-info">
+          <div class="panel-heading">slider</div>
+          <div class="panel-body">
+            Panelcontent
+          </div>
+        </div>
+          <div class="site-search panel panel-info">
+            <div class="panel-heading">Поиск</div>
+            <div class="panel-body">
+              Panelcontent
+            </div>
+          </div>
+          <div class="user-login panel panel-info">
+            <div class="panel-heading">Пользователь</div>
+            <div class="panel-body">
+              Panelcontent
+            </div>
+          </div>
+          <div class="site-news  panel panel-info">
+            <div class="panel-heading">Новости сайта</div>
+            <div class="panel-body">
+              Panelcontent
+            </div>
+          </div>
+          <div class="top-films panel panel-info">
+            <div class="panel-heading">Рейтинг Фильмов</div>
+            <div class="panel-body">
+              Panelcontent
+            </div>
+          </div>
+
+      </aside>
+
+    </div>
+  </div>
+  <footer class="footer">
+
+  </footer>
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,137 @@
+.header-logo__title, .header-logo__description {
+  text-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
+}
+
+.navbar-inverse {
+  background-color: darken #232323, 4%;
+}
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: #053159;
+}
+.navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #517ba2;
+}
+.navbar-inverse .navbar-nav > li > a {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #165690;
+}
+
+.navbar-header {
+  text-align: center;
+}
+
+.navbar-toggle {
+  float: none;
+  margin-right: 0;
+}
+
+.panel-info {
+  border: none;
+  background-color: #f4f4f4;
+}
+.panel-info:not(last-of-type) {
+  margin-bottom: 30px;
+}
+.panel-info:last-of-type {
+  margin-bottom: 0;
+}
+.panel-info .panel-heading {
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  background-color: #df8a13;
+  color: #ffffff;
+  border: none;
+}
+.panel-info .panel-body {
+  border: 1px solid #d5d5d5;
+  border-radius: 0 0 4px 4px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+  overflow-y: scroll;
+}
+
+a {
+  color: #165690;
+}
+a:hover, a:focus {
+  color: #df8a13;
+  text-decoration: none;
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.header-logo {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url(../img/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.header-logo__title {
+  display: block;
+  letter-spacing: 0.33em;
+  font-family: "PT Serif", serif;
+  color: #df8a13;
+  margin-right: -0.33em;
+}
+.header-logo__description {
+  display: block;
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+}
+
+.main {
+  margin-bottom: 80px;
+}
+
+.left-sidebar {
+  margin-bottom: 80px;
+}
+
+@media (min-width: 576px) {
+  .header-logo__title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-inverse .navbar-nav > li > a {
+    border-radius: 4px;
+  }
+  .navbar-left > li {
+    margin: 5px 5px 5px 0;
+  }
+  .navbar-right > li {
+    margin: 5px 0 5px 5px;
+  }
+}
+
+@media (max-width: 767.8px) {
+  .navbar-left {
+    margin-bottom: 0;
+  }
+  .navbar-right {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .header-logo__title {
+    font-size: 2.5rem;
+  }
+}
