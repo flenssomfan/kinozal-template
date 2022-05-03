@@ -10,15 +10,147 @@
 &-row {
   margin-right: -$gap-sm;
   margin-left: -$gap-sm;
-  margin-bottom: -$gap; 
+  margin-bottom: -$gap;
 }
 &-item {
  padding-right: $gap-sm;
  padding-left: $gap-sm;
- margin-bottom: $gap; 
+ margin-bottom: $gap;
 
- &__thumbnail {
-   margin-bottom: 0;
- }
 }
+}
+.new-films,
+.top-films {
+
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    font-family: $font-header;
+
+    &::after {
+      @extend %line-after
+    }
+  }
+
+  &-item {
+    margin-bottom: -6px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+
+&__title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.25s;
+}
+    &__thumbnail {
+      transition: background-color 0.25s;
+    }
+    &__image {
+      width: 100%;
+    }
+    &:hover,
+    &:focus {
+      .new-films-item__thumbnail,
+      .top-films-item__thumbnail {
+        background-color: $color-accent;
+        border-color: $color-accent;
+      }
+    }
+    &:hover,
+    &:focus {
+      .new-films-item__title,
+      .top-films-item__title {
+       color: $color-white;
+      }
+    }
+  }
+}
+.new-films__title {
+  margin-bottom: 1em;
+
+  @include xs-min {
+    font-size: 3rem;
+    margin-top: -10px;
+  }
+
+  @include xs {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}
+.top-films__title,{
+  &::before {
+    @extend %line-before;
+  }
+
+  @include xs-min {
+    font-size: 2.5rem;
+    margin: 60px 0 45px 45px;
+  }
+
+  @include xs {
+    font-size: 1.75rem;
+    margin: 45px 0 30px 45px;
+  }
+}
+.film-news {
+  overflow: hidden;
+  &__title {
+    position: relative;
+    font-family: $font-header;
+    &::after {
+      @extend %line-after;
+    }
+    &::before {
+      @extend %line-before;
+    }
+
+    @include xs-min {
+      font-size: 2.5rem;
+      margin: 60px 0 45px 45px;
+    }
+
+    @include xs {
+      font-size: 1.75rem;
+      margin: 45px 0 30px 45px;
+    }
+  }
+
+  &-item {
+    &__description {
+      text-align: justify;
+    }
+
+    &__btn {
+      float: right;
+      margin-bottom: 30px;
+      transition: background-color 0.25s;
+    }
+
+    &__thumbnail {
+      transition: background-color 0.25s;
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      h3 > a {
+        color: $color-accent;
+      }
+      .film-news-item__thumbnail,
+      .film-news-item__btn {
+        background-color: $color-accent !important;
+      }
+      .film-news-item__thumbnail {
+        border-color: $color-accent;
+      }
+    }
+  }
 }

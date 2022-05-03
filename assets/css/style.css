@@ -2,6 +2,33 @@
   text-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
 }
 
+.new-films__title::after,
+.top-films__title::after, .film-news__title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #f0ad4f;
+  top: 80%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 15px;
+}
+
+.top-films__title::before, .film-news__title::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  background-color: #f0ad4f;
+  top: 25%;
+  margin-left: -50px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .navbar-inverse {
   background-color: darken #232323, 4%;
 }
@@ -128,8 +155,103 @@ h1 {
   padding-left: 7.5px;
   margin-bottom: 15px;
 }
-.new-films-item__thumbnail {
+
+.new-films,
+.top-films {
+  overflow: hidden;
+}
+.new-films__title,
+.top-films__title {
+  position: relative;
+  font-family: "PT Serif", serif;
+}
+.new-films-item,
+.top-films-item {
+  margin-bottom: -6px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.new-films-item__title,
+.top-films-item__title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.new-films-item__thumbnail,
+.top-films-item__thumbnail {
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+.new-films-item__image,
+.top-films-item__image {
+  width: 100%;
+}
+.new-films-item:hover .new-films-item__thumbnail,
+.new-films-item:hover .top-films-item__thumbnail, .new-films-item:focus .new-films-item__thumbnail,
+.new-films-item:focus .top-films-item__thumbnail,
+.top-films-item:hover .new-films-item__thumbnail,
+.top-films-item:hover .top-films-item__thumbnail,
+.top-films-item:focus .new-films-item__thumbnail,
+.top-films-item:focus .top-films-item__thumbnail {
+  background-color: #df8a13;
+  border-color: #df8a13;
+}
+.new-films-item:hover .new-films-item__title,
+.new-films-item:hover .top-films-item__title, .new-films-item:focus .new-films-item__title,
+.new-films-item:focus .top-films-item__title,
+.top-films-item:hover .new-films-item__title,
+.top-films-item:hover .top-films-item__title,
+.top-films-item:focus .new-films-item__title,
+.top-films-item:focus .top-films-item__title {
+  color: #ffffff;
+}
+
+.new-films__title {
+  margin-bottom: 1em;
+}
+
+.film-news {
+  overflow: hidden;
+}
+.film-news__title {
+  position: relative;
+  font-family: "PT Serif", serif;
+}
+.film-news-item__description {
+  text-align: justify;
+}
+.film-news-item__btn {
+  float: right;
+  margin-bottom: 30px;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+.film-news-item__thumbnail {
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   margin-bottom: 0;
+}
+.film-news-item:hover h3 > a, .film-news-item:focus h3 > a {
+  color: #df8a13;
+}
+.film-news-item:hover .film-news-item__thumbnail,
+.film-news-item:hover .film-news-item__btn, .film-news-item:focus .film-news-item__thumbnail,
+.film-news-item:focus .film-news-item__btn {
+  background-color: #df8a13 !important;
+}
+.film-news-item:hover .film-news-item__thumbnail, .film-news-item:focus .film-news-item__thumbnail {
+  border-color: #df8a13;
 }
 
 .left-sidebar {
@@ -259,6 +381,18 @@ h1 {
   .header-logo__title {
     font-size: 3.5rem;
   }
+  .new-films__title {
+    font-size: 3rem;
+    margin-top: -10px;
+  }
+  .top-films__title {
+    font-size: 2.5rem;
+    margin: 60px 0 45px 45px;
+  }
+  .film-news__title {
+    font-size: 2.5rem;
+    margin: 60px 0 45px 45px;
+  }
 }
 @media (min-width: 768px) {
   .navbar-inverse .navbar-nav > li > a {
@@ -282,5 +416,17 @@ h1 {
 @media (max-width: 575.8px) {
   .header-logo__title {
     font-size: 2.5rem;
+  }
+  .new-films__title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .top-films__title {
+    font-size: 1.75rem;
+    margin: 45px 0 30px 45px;
+  }
+  .film-news__title {
+    font-size: 1.75rem;
+    margin: 45px 0 30px 45px;
   }
 }
