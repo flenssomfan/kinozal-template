@@ -2,7 +2,9 @@
   text-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
 }
 
-.new-films__title::after,
+.film-info__title::after, .film-description__title::after,
+.film-comments__title::after,
+.film-form__title::after, .new-films__title::after,
 .top-films__title::after, .film-news__title::after {
   content: "";
   position: absolute;
@@ -16,7 +18,9 @@
   margin-left: 15px;
 }
 
-.top-films__title::before, .film-news__title::before {
+.film-description__title::before,
+.film-comments__title::before,
+.film-form__title::before, .top-films__title::before, .film-news__title::before {
   content: "";
   position: absolute;
   width: 35px;
@@ -254,6 +258,53 @@ h1 {
   border-color: #df8a13;
 }
 
+.film-info {
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+.film-info__title {
+  position: relative;
+  font-family: "PT Serif", serif;
+  margin-bottom: 1em;
+}
+.film-info__well {
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+  border-color: #d5d5d5;
+  background-color: #f4f4f4;
+}
+.film-info__badge {
+  font-size: 0.96rem;
+}
+.film-info__wrapper {
+  white-space: nowrap;
+}
+.film-info__wrapper:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.film-description,
+.film-comments,
+.film-form {
+  overflow: hidden;
+}
+.film-description__title,
+.film-comments__title,
+.film-form__title {
+  position: relative;
+  font-family: "PT Serif", serif;
+}
+
+.film-form__txt {
+  resize: vertical;
+}
+.film-form__btn {
+  margin-top: 15px;
+}
+.film-form__btn:hover {
+  background-color: #df8a13 !important;
+}
+
 .left-sidebar {
   margin-bottom: 80px;
 }
@@ -377,6 +428,33 @@ h1 {
       -ms-transform: translate(-50%);
           transform: translate(-50%);
 }
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  padding-top: 45px;
+  background-color: #232323;
+  color: #d5d5d5;
+}
+.footer a {
+  color: #6f6f6f;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-last-block {
+  text-align: center;
+  margin: 20px 0;
+}
+.footer-last-block a {
+  color: #d5d5d5;
+}
 @media (min-width: 576px) {
   .header-logo__title {
     font-size: 3.5rem;
@@ -390,6 +468,16 @@ h1 {
     margin: 60px 0 45px 45px;
   }
   .film-news__title {
+    font-size: 2.5rem;
+    margin: 60px 0 45px 45px;
+  }
+  .film-info__title {
+    font-size: 3rem;
+    margin-top: -10px;
+  }
+  .film-description__title,
+.film-comments__title,
+.film-form__title {
     font-size: 2.5rem;
     margin: 60px 0 45px 45px;
   }
@@ -426,6 +514,16 @@ h1 {
     margin: 45px 0 30px 45px;
   }
   .film-news__title {
+    font-size: 1.75rem;
+    margin: 45px 0 30px 45px;
+  }
+  .film-info__title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .film-description__title,
+.film-comments__title,
+.film-form__title {
     font-size: 1.75rem;
     margin: 45px 0 30px 45px;
   }

@@ -1,2 +1,34 @@
 @use "presets" as *;
 @use "mixins" as *;
+
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  padding-top: 45px;
+  background-color: $color-dark;
+  color: $color-gray;
+
+  a {
+    color: $color-gray-dark;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &-last-block {
+    text-align: center;
+    margin: 20px 0;
+
+    a {
+      color: $color-gray;
+    }
+  }
+}
